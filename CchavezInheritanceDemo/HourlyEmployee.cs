@@ -18,14 +18,14 @@ namespace CchavezInheritanceDemo
 
         public HourlyEmployee() : base()
         {
-            HourlyRate = 15.0M;
+            HourlyRate = 10.00M;
         }
 
         //  4.2.	Add the following method to the HourlyEmployee class:
         //  4.2.1.	Notice the override keyword.
         public override string GetPaySummary()
         {
-            return "This employee is payed " + HourlyRate + " per hour";
+            return $"Hourly Employee {FirstName} {LastName} is payed {HourlyRate} per hour";
         }
         //  5.1.	Change the HourlyEmployee code to:
         //HourlyEmployee hourEmp = new HourlyEmployee();
@@ -77,10 +77,10 @@ namespace CchavezInheritanceDemo
         //}
 
         //  7.2.	Change GetPaySummary() into a property in HourlyEmployee.cs as well:
-        //public override string PaySummary
-        //{
-        //    get { return "This employee is payed " + HourlyRate + " per hour"; }
-        //}
+        public override string PaySummary
+        {
+            get { return $"Hourly Employee {FirstName} {LastName} is payed {HourlyRate} per hour"; }
+        }
 
     }
 

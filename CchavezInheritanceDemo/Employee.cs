@@ -13,19 +13,19 @@ namespace CchavezInheritanceDemo
         public int EmpNum { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-    
 
         //  4.1.	Add the following method to the Employee class:
         public virtual string GetPaySummary()
         {
-            return "No pay for base class employee.";
+            return $"No pay for infor for {FirstName} {LastName}";
         }
 
+
         //  7.1.	Change GetPaySummary() into a property in Employee.cs:
-        //public virtual string PaySummary
-        //{
-        //    get { return "No pay for base class employee."; }
-        //}
+        public virtual string PaySummary
+        {
+            get { return $"No pay for infor for {FirstName} {LastName}"; }
+        }
 
     }
 }
